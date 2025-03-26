@@ -1,0 +1,72 @@
+:root {
+  --color-base-bg: hsl(216, 12%, 8%);
+  --color-base-text: hsl(217, 12%, 63%);
+  --color-base-footer: hsl(25, 97%, 53%);
+  --color-base-footer-link: hsl(141, 71%, 48%);
+}
+
+/* --- GLOBAL RESET --- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------- */
+/* -------------------- */
+
+/* --- FONT --- */
+
+body {
+  font-family: "Your font", sans-serif;
+  font-weight: 400; /* Regular (default) */
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500; /* Medium */
+}
+
+/* -------------------- */
+/* -------------------- */
+
+/* --- FOOTER --- */
+
+.footer {
+  margin-top: auto;
+  text-align: center;
+  color: var(--color-base-footer);
+}
+
+.attribution {
+  font-size: 0.688rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.footer a {
+  /* color: var(--color-base-footer-green); */
+  text-decoration: none;
+  color: var(--color-base-footer-link);
+}
+
+.fa-github {
+  /* color: var(--color-base-footer-green); */
+  margin-left: 0.5rem;
+}
+
+/* -------------------- */
+/* -------------------- */
+
+/* --- MEDIA QUERIES --- */
+@media screen and (min-width: 768px) {
+}
+
+/* -------------------- */
+/* -------------------- */
