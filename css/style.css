@@ -19,8 +19,19 @@
 /* --- FONT --- */
 
 body {
-  font-family: "Your font", sans-serif;
+  font-family: "Inconsolata", sans-serif;
   font-weight: 400; /* Regular (default) */
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+
+  background: url("/assets/images/background-mobile.png") no-repeat center
+      center fixed,
+    url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg")
+      no-repeat bottom center fixed;
+  background-size: cover, contain;
+  position: relative;
 }
 
 h1,
