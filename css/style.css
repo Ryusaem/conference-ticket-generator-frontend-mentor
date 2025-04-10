@@ -3,6 +3,10 @@
   --color-base-text: hsl(217, 12%, 63%);
   --color-base-footer: hsl(25, 97%, 53%);
   --color-base-footer-link: hsl(141, 71%, 48%);
+
+  --color-orange500: hsl(7, 88%, 67%);
+  --color-orange700: hsl(7, 71%, 60%);
+  --color-gradient-text: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
 }
 
 /* --- GLOBAL RESET --- */
@@ -21,23 +25,30 @@
 body {
   font-family: "Inconsolata", sans-serif;
   font-weight: 400; /* Regular (default) */
+  padding: 15px;
+  margin-top: 70px;
 
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 
-  background: url("/assets/images/background-mobile.png") no-repeat center
-      center fixed,
-    url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg")
-      no-repeat bottom center fixed;
-  background-size: cover, contain;
+  background: url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg")
+      no-repeat bottom left fixed,
+    url("/assets/images/pattern-squiggly-line-top.svg") no-repeat 100% 2%,
+    url("/assets/images/pattern-lines.svg") no-repeat top center fixed,
+    url("/assets/images/logo-full.svg") no-repeat 50% 4%,
+    url("/assets/images/background-mobile.png") no-repeat center center fixed;
+
+  background-size: contain, 100px auto, contain, 150px auto, cover;
   position: relative;
 }
 
-h1,
-h2,
-h3 {
-  font-weight: 500; /* Medium */
+.intro__heading {
+  color: white;
+}
+
+.intro__subtitle {
+  color: white;
 }
 
 /* -------------------- */
