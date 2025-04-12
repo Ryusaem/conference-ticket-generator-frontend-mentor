@@ -6,7 +6,16 @@
 
   --color-orange500: hsl(7, 88%, 67%);
   --color-orange700: hsl(7, 71%, 60%);
-  --color-gradient-text: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+  /* --color-gradient-text: hsl(7, 86%, 67%) to hsl(0, 0%, 100%); */
+
+  --color-neutral0: hsl(0, 0%, 100%);
+  --color-neutral300: hsl(252, 6%, 83%);
+  --color-neutral500: hsl(245, 15%, 58%);
+  --color-neutral700: hsl(245, 19%, 35%);
+  --color-neutral900: hsl(248, 70%, 10%);
+
+  --gap: 1rem;
+  --gap-field: 0.5rem;
 }
 
 /* --- GLOBAL RESET --- */
@@ -25,6 +34,9 @@
 body {
   font-family: "Inconsolata", sans-serif;
   font-weight: 400; /* Regular (default) */
+  font-size: 1rem;
+  /* line-height: 1.5; */
+
   padding: 15px;
   margin-top: 70px;
 
@@ -45,12 +57,119 @@ body {
   color: white; /* temporary */
 }
 
-.intro__heading {
-  color: white;
+/* -------------------- */
+/* -------------------- */
+
+/* --- Main: Coding-conf Hero --- */
+
+.coding-conf__hero {
+  display: grid;
+  margin-bottom: 2rem;
+
+  /* border: 1px solid blue; */
 }
 
-.intro__subtitle {
-  color: white;
+.coding-conf__title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  text-align: center;
+  width: 90%;
+
+  place-self: center;
+  /* border: 1px solid red; */
+}
+
+.coding-conf__subtitle {
+  color: var(--color-neutral300);
+  line-height: 1.2;
+  text-align: center;
+  width: 90%;
+
+  place-self: center;
+
+  /* border: 1px solid pink; */
+}
+
+/* -------------------- */
+/* -------------------- */
+
+/* --- Main: Coding-conf Form --- */
+
+/* The Full Form */
+.coding-conf__form {
+  display: grid;
+  gap: var(--gap);
+
+  border: 1px solid red;
+}
+
+/* Every field */
+.coding-conf__field {
+  display: grid;
+  /* gap: 0.5rem; */
+  gap: var(--gap-field);
+
+  border: 1px solid yellow;
+}
+
+/* -------------------- */
+/* -------------------- */
+
+/* --- Main: Coding-conf Form: Avatar --- */
+
+.coding-conf__field--avatar {
+  display: grid;
+  gap: var(--gap-field);
+  margin-bottom: 0.5rem;
+
+  border: 1px solid white;
+}
+
+/* Container of the border*/
+.coding-conf__uploader {
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: rgba(74, 9, 204, 0.15);
+  gap: var(--gap);
+}
+
+/* Container of our upload icon (label) */
+.coding-conf__uploader-label {
+  display: grid;
+  gap: var(--gap);
+}
+
+.coding-conf__uploader-icon {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  place-self: center;
+  cursor: pointer;
+}
+
+.coding-conf__uploader-text {
+  display: block;
+  place-self: center;
+  font-size: 1.1rem;
+  color: var(--color-neutral500);
+}
+
+/* Adding the (!) logo before the "note" */
+.coding-conf__note::before {
+  position: relative;
+  content: url(../assets/images/icon-info.svg);
+  top: 20%;
+}
+
+/* This is the "note" */
+.coding-conf__note {
+  color: var(--color-neutral500);
+  font-size: 0.75rem;
+  position: relative;
 }
 
 /* -------------------- */
