@@ -30,61 +30,98 @@
 
 </head>
 
-<body class="page">
+<body>
 
-    <!-- Form starts -->
-    <header class="page-header">
 
-    </header>
+    <main class="coding-conf">
 
-    <main class="page-main">
-        <section class="intro">
-            <h2 class="intro__heading">Your Journey to Coding Conf 2025 Starts Here!</h2>
-            <p class="intro__subtitle">
+        <!-- 
+            Block: coding-conf 
+            Element: coding-conf__hero 
+            Element: coding-conf__title 
+            Element: coding-conf__subtitle
+        -->
+        <section class="coding-conf__hero">
+            <h1 class="coding-conf__title">Your Journey to Coding Conf 2025 Starts Here!</h1>
+            <p class="coding-conf__subtitl">
                 Secure your spot at next year's biggest coding conference.
             </p>
         </section>
+
+        <!-- 
+            Block: coding-conf 
+            Element: coding-conf__form (the main form) 
+                Element: coding-conf__field (avatar)
+                Element: coding-conf__field (Full Name)
+                Element: coding-conf__field (Email)
+                Element: coding-conf__field (Github)
+                Element: coding-conf__btn
+        -->
+        <form class="coding-conf__form" action="#" method="POST" enctype="multipart/form-data">
+
+            <!-- Avatar upload field -->
+            <div class="coding-conf__field coding-conf__field--avatar">
+
+                <label class="coding-conf__label" for="avatar">Upload Avatar</label>
+
+                <div>
+                    <input class="coding-conf__input coding-conf__input--file" type="file"
+                        accept="image/png, image/jpeg" name="avatarFile" />
+                    <span class="coding-conf__uploader-text">
+                        Drag and drop or click to upload
+                    </span>
+                </div>
+
+                <p class="coding-conf__note">
+                    Upload your photo (JPG or PNG, max size: 500KB).
+                </p>
+
+            </div>
+
+            <!-- Full Name field -->
+            <div class="coding-conf__field">
+                <label class="coding-conf__label" for="fullName">Full Name</label>
+                <input type="text" class="coding-conf__input" id="fullName" name="fullName" placeholder="Full Name"
+                    required />
+            </div>
+
+            <!-- Email Address field -->
+            <div class="coding-conf__field">
+                <label class="coding-conf__label" for="email">Email Address</label>
+                <input type="email" class="coding-conf__input" id="email" name="email" placeholder="example@email.com"
+                    required />
+            </div>
+
+            <!-- GitHub Username field -->
+            <div class="coding-conf__field">
+                <label class="coding-conf__label" for="githubUsername">GitHub Username</label>
+                <input type="text" class="coding-conf__input" id="githubUsername" name="githubUsername"
+                    placeholder="@yourusername" />
+            </div>
+
+            <!-- Submit button -->
+            <button class="coding-conf__btn" type="submit">Generate My Ticket</button>
+
+        </form>
+        <!-- Form ends -->
+
+        <!-- Generated tickets starts -->
+
+        <p style="display: none">
+            Congrats, <!-- Full Name -->! Your ticket is ready.
+
+            We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
+
+            Coding Conf
+            Jan 31, 2025 / Austin, TX
+        </p>
+
+        <!-- Generated tickets ends -->
+        <!-- Generated tickets ends -->
+        <!-- Generated tickets ends -->
     </main>
 
-    Upload Avatar
-    Drag and drop or click to upload
-    Upload your photo (JPG or PNG, max size: 500KB).
 
-    Full Name
-
-    Email Address
-    example@email.com
-
-    GitHub Username
-    @yourusername
-
-    Generate My Ticket
-
-    <!-- Form ends -->
-
-    <!-- Generated tickets starts -->
-
-    Congrats, <!-- Full Name -->! Your ticket is ready.
-
-    We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
-
-    Coding Conf
-    Jan 31, 2025 / Austin, TX
-
-    <!-- Generated tickets ends -->
-    <!-- Generated tickets ends -->
-    <!-- Generated tickets ends -->
-
-
-    <div class="container">
-        <header>
-
-        </header>
-
-        <main>
-
-        </main>
-    </div>
 
     <footer class="footer">
         <div class="attribution">

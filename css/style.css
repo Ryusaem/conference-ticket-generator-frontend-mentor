@@ -41,6 +41,8 @@ body {
 
   background-size: contain, 100px auto, contain, 150px auto, cover;
   position: relative;
+
+  color: white; /* temporary */
 }
 
 .intro__heading {
