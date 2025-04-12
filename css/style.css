@@ -16,6 +16,10 @@
 
   --gap: 1rem;
   --gap-field: 0.5rem;
+  --padding: 1rem;
+  --border: 2px solid rgba(255, 255, 255, 0.3);
+  --border-radius: 10px;
+  --background-color: rgba(74, 9, 204, 0.15);
 }
 
 /* --- GLOBAL RESET --- */
@@ -45,13 +49,13 @@ body {
   min-height: 100vh;
 
   background: url("../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg")
-      no-repeat bottom left fixed,
+      no-repeat bottom left,
     url("../assets/images/pattern-squiggly-line-top.svg") no-repeat 100% 2%,
     url("../assets/images/pattern-lines.svg") no-repeat top center fixed,
     url("../assets/images/logo-full.svg") no-repeat 50% 4%,
     url("../assets/images/background-mobile.png") no-repeat center center fixed;
 
-  background-size: contain, 100px auto, contain, 150px auto, cover;
+  background-size: 270px auto, 100px auto, contain, 150px auto, cover;
   position: relative;
 
   color: white; /* temporary */
@@ -101,16 +105,41 @@ body {
   display: grid;
   gap: var(--gap);
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+/* Every Label (Full Name, Email adress, etc...) */
+.coding-conf__label {
+  font-family: inherit;
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Every Input */
+.coding-conf__input {
+  border: var(--border);
+  background-color: var(--background-color);
+  height: 50px;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  font-family: inherit;
+
+  color: white;
+  font-size: 1.1rem;
+}
+
+.coding-conf__input::placeholder {
+  color: var(--color-neutral500);
+  font-size: 1.1rem;
+  /* letter-spacing: 1px; */
 }
 
 /* Every field */
 .coding-conf__field {
   display: grid;
-  /* gap: 0.5rem; */
   gap: var(--gap-field);
 
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 
 /* -------------------- */
@@ -123,14 +152,14 @@ body {
   gap: var(--gap-field);
   margin-bottom: 0.5rem;
 
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 /* Container of the border*/
 .coding-conf__uploader {
   border: 2px dashed rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  padding: 1rem;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
   background-color: rgba(74, 9, 204, 0.15);
   gap: var(--gap);
 }
@@ -141,11 +170,13 @@ body {
   gap: var(--gap);
 }
 
+/* The icon */
 .coding-conf__uploader-icon {
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+
   border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(207, 183, 183, 0.15);
 
   place-self: center;
   cursor: pointer;
@@ -170,6 +201,17 @@ body {
   color: var(--color-neutral500);
   font-size: 0.75rem;
   position: relative;
+}
+
+/* Button */
+.coding-conf__btn {
+  height: 50px;
+  background-color: var(--color-orange500);
+  border-radius: var(--border-radius);
+  border: none;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 /* -------------------- */
