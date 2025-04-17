@@ -256,17 +256,78 @@ body {
 /* --- MEDIA QUERIES --- */
 @media screen and (min-width: 768px) {
   body {
-    grid-template-rows: repeat(2, auto);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-content: space-between;
 
     background-size: 470px auto, 300px auto, contain, 150px auto, cover;
+
+    border: 1px solid yellow;
   }
+
   .coding-conf {
+    height: 100%;
     display: grid;
+    border: 1px solid red;
+
+    /* margin-top: 50px; */
   }
 
   .coding-conf__form {
     place-self: center;
-    width: 40%;
+    width: 30%;
+  }
+
+  .coding-conf__note::before {
+    position: relative;
+    content: url(../assets/images/icon-info.svg);
+    top: 20%;
+  }
+
+  .coding-conf__uploader-text {
+    font-size: 0.7rem;
+  }
+
+  .coding-conf__field--avatar {
+    margin-bottom: 0;
+  }
+
+  /* space between the container and the content avatar */
+  .coding-conf__uploader {
+    padding: 10px;
+  }
+
+  /* space between the icon and text bellow */
+  .coding-conf__uploader-label {
+    gap: 10px;
+  }
+
+  /* Size of the icon */
+  .coding-conf__uploader-icon {
+    padding: 5px;
+    height: 30px;
+  }
+
+  /* Text bellow the avatar container */
+  .coding-conf__note {
+    font-size: 0.6rem;
+  }
+
+  .coding-conf__label {
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .coding-conf__input {
+    height: 30px;
+  }
+
+  .coding-conf__btn {
+    height: 30px;
+    margin-top: 0;
   }
 }
 
