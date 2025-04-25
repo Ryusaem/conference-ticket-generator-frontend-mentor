@@ -46,7 +46,7 @@ body {
   margin-top: 70px;
 
   display: grid;
-  /* grid-template-rows: auto auto; */
+  grid-template-rows: minmax(90vh, auto) auto;
   min-height: 100vh;
 
   background: url("../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg")
@@ -259,7 +259,7 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: auto 100px;
+    grid-template-rows: minmax(80vh, auto) 100px;
     align-content: space-between;
 
     background: url("../assets/images/pattern-squiggly-line-bottom-desktop.svg")
