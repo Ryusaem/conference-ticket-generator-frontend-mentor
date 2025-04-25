@@ -4,6 +4,8 @@
   --color-base-footer: hsl(25, 97%, 53%);
   --color-base-footer-link: hsl(141, 71%, 48%);
 
+  --accent-color: hsl(7, 88%, 67%);
+  --secondary-accent: hsl(0, 0%, 100%);
   --color-orange500: hsl(7, 88%, 67%);
   --color-orange700: hsl(7, 71%, 60%);
   /* --color-gradient-text: hsl(7, 86%, 67%) to hsl(0, 0%, 100%); */
@@ -221,6 +223,44 @@ body {
 /* -------------------- */
 /* -------------------- */
 
+/* Ticket */
+.coding-conf__ticket {
+  /* padding: 2rem; */
+  text-align: center;
+  display: grid;
+}
+
+.coding-conf__ticket__heading {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.coding-conf__ticket__text {
+  font-size: 1rem;
+  max-width: 30rem;
+}
+
+.coding-conf__ticket__username {
+  /* 1) Gradient on the element’s background */
+  background: linear-gradient(
+    45deg,
+    var(--accent-color) 0%,
+    var(--secondary-accent) 100%
+  );
+
+  /* 2) Clip the background to the text glyphs */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3) Make the actual fill transparent so the gradient shows */
+  color: transparent; /* for most browsers */
+  -webkit-text-fill-color: transparent; /* for WebKit-based browsers */
+}
+
+/* -------------------- */
+/* -------------------- */
+
 /* --- FOOTER --- */
 
 .footer {
@@ -369,3 +409,12 @@ body {
 
 /* -------------------- */
 /* -------------------- */
+
+@keyframes gradient-slide {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
