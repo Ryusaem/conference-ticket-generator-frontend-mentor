@@ -16,7 +16,10 @@
   --color-neutral700: hsl(245, 19%, 35%);
   --color-neutral900: hsl(248, 70%, 10%);
 
+  --mini-gap: 0.2rem;
   --gap: 1rem;
+  --big-gap: 2.5rem;
+
   --gap-field: 0.5rem;
   --padding: 1rem;
   --margin-top: 1rem;
@@ -223,22 +226,19 @@ body {
 /* -------------------- */
 /* -------------------- */
 
-/* Ticket */
+/* Main Container of the Whole Ticket */
 .coding-conf__ticket {
-  /* padding: 2rem; */
   text-align: center;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  /* padding: 2rem; */
 }
 
+/* Title (Congrats ...) */
 .coding-conf__ticket__heading {
   font-size: 2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
-}
-
-.coding-conf__ticket__text {
-  font-size: 1rem;
-  max-width: 30rem;
 }
 
 .coding-conf__ticket__username {
@@ -256,6 +256,152 @@ body {
   /* 3) Make the actual fill transparent so the gradient shows */
   color: transparent; /* for most browsers */
   -webkit-text-fill-color: transparent; /* for WebKit-based browsers */
+}
+
+/* Little message ("We've emailed you..." */
+.coding-conf__ticket__text {
+  font-size: 1rem;
+  max-width: 30rem;
+  line-height: 1.4;
+}
+
+/* The email inside the little message */
+.coding-conf__ticket__email {
+  color: var(--color-orange500);
+}
+
+/* -------------------- */
+/* -------------------- */
+
+/* The Container for the Card */
+.ticket-card {
+  margin-top: calc(var(--margin-top) * 4);
+  position: relative;
+  width: min(90vw, 480px);
+  /* 1) put your SVG here */
+  background: url("../assets/images/pattern-ticket.svg") no-repeat center /
+    contain;
+  border-radius: 8px;
+
+  /* border: 1px solid pink; */
+}
+
+.ticket-card__content {
+  position: relative;
+  height: 100%;
+  padding: 0.9rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--big-gap);
+
+  justify-content: space-between;
+
+  /* border: 1px solid yellow; */
+}
+
+/* Vertical number down the right edge */
+.ticket-card__number {
+  position: absolute;
+  top: 50%;
+  right: 0.1rem;
+  transform: translateY(-50%) rotate(90deg);
+  color: var(--color-neutral500);
+  font-size: 1rem;
+}
+
+/*  Container Ticket Card Info (Logo Conf + Title + Date) */
+.ticket-card__info {
+  display: flex;
+  justify-content: start;
+  gap: var(--gap);
+
+  border: 1px solid red;
+}
+
+/* The Conf Logo */
+.ticket-card__logo {
+  width: 2.3rem;
+  height: 2.3rem;
+  /* border-radius: 50%; */
+  object-fit: cover;
+}
+
+.ticket-card__info-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+
+  border: 1px solid gray;
+}
+
+.ticket-card__title {
+  text-align: start;
+  font-size: 1.5rem;
+}
+
+.ticket-card__meta {
+  color: var(--color-neutral300);
+  font-size: 0.9rem;
+}
+
+/* -------------------- */
+/* -------------------- */
+
+/* Ticket Card User */
+
+/* Container of the User Avatar + Username  */
+.ticket-card__user {
+  display: flex;
+  gap: var(--gap);
+
+  border: 1px solid green;
+}
+
+/* The User Avatar */
+.ticket-card__avatar {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* The username */
+.ticket-card__name {
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+/* Container of the username + github email */
+.ticket-card__user-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mini-gap);
+
+  border: 1px solid orange;
+}
+
+/* Container of the github logo + github email */
+.ticket-card__user-info-box {
+  display: flex;
+  gap: var(--mini-gap);
+
+  border: 1px solid cyan;
+}
+
+/* Github logo */
+.ticket-card__github {
+  height: 1rem;
+  width: 1rem;
+}
+
+/* Github email */
+.ticket-card__handle {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--color-neutral300);
+  align-self: center;
 }
 
 /* -------------------- */
@@ -405,16 +551,12 @@ body {
     height: 30px;
     margin-top: 10px;
   }
+
+  /* Ticket */
+  .ticket-card__number {
+    right: 2rem;
+  }
 }
 
 /* -------------------- */
 /* -------------------- */
-
-@keyframes gradient-slide {
-  from {
-    background-position: 0% 50%;
-  }
-  to {
-    background-position: 100% 50%;
-  }
-}
